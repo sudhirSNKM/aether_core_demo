@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A E T H E R | Immersive 3D Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;700&family=Space+Grotesk:wght@300;600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <canvas id="webgl"></canvas>
+
+  <div class="loading-screen" id="calibrating">
+    <div class="loader-text">CALIBRATING REALITY...</div>
+    <div class="loader-bar">
+      <div class="loader-progress"></div>
+    </div>
+  </div>
+
+  <nav class="ui-nav">
+    <div class="logo">AETHER</div>
+    <div class="status-indicator"><span class="dot"></span> SYSTEM ONLINE</div>
+  </nav>
+
+  <div class="scroll-prompt">
+    <span>SCROLL TO INITIATE</span>
+    <div class="scroll-line"></div>
+  </div>
+
+  <div class="promo-banner glass-panel">
+    <div class="promo-content">
+      <span class="promo-tag">LIMITED ACCESS</span>
+      <p>Join the <strong>Alpha Node</strong> program correctly. Get <span class="highlight">3 Months Free</span> +
+        Premium Neural Assets.</p>
+    </div>
+    <div class="promo-timer">
+      <span>OFFER ENDS:</span>
+      <span id="countdown">04:23:15</span>
+    </div>
+    <button class="promo-btn">CLAIM NOW</button>
+  </div>
+
+  <main class="scroll-container">
+    <!-- Section 1: Reveal -->
+    <section class="section" id="section-reveal">
+      <div class="content glass-panel fade-in">
+        <h1>AETHER CORE</h1>
+        <p class="subtitle">The architecture of next-gen intelligence.</p>
+        <p>Aether is not just a platform; it is a living digital ecosystem designed to process, adapt, and evolve. Born
+          from the convergence of quantum logic and organic design, it represents the first step into a new era of
+          computational spatiality.</p>
+      </div>
+    </section>
+
+    <!-- Section 2: Exploration -->
+    <section class="section right-align" id="section-explore">
+      <div class="content glass-panel fade-in">
+        <h2>NEURAL GEOMETRY</h2>
+        <p>Traditional data is static. Aether renders information as multi-dimensional geometry, allowing for intuitive
+          navigation through complex datasets.</p>
+        <p>By rotating perspectives, users uncover hidden correlations in the noise.</p>
+        <div class="data-block">
+          <span>LATENCY: 0.04ms</span>
+          <span>NODES: 4.2B</span>
+          <span>STATUS: OPTIMAL</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Transformation -->
+    <section class="section center-align" id="section-transform">
+      <div class="content glass-panel fade-in">
+        <h2>ADAPTIVE MORPHOLOGY</h2>
+        <p>The system breathes. When challenged with new parameters, the core structure fragments and reassembles.</p>
+        <p>This is <strong>Dynamic Reshaping</strong> — the ability to rewrite internal logic without downtime.</p>
+        <div class="data-block">
+          <span>PROTOCOL: METAMORPH</span>
+          <span>INTEGRITY: 100%</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Meaning -->
+    <section class="section left-align" id="section-meaning">
+      <div class="content glass-panel fade-in">
+        <h2>HUMAN SYNTHESIS</h2>
+        <p>Technology should feel natural. The motion you see isn't scripted animation; it's a reaction to your
+          presence.</p>
+        <p>Aether bridges the gap between silicon and synapse, creating an interface that feels less like a tool and
+          more like an extension of the mind.</p>
+      </div>
+    </section>
+
+    <!-- Section 5: Finale -->
+    <section class="section center-align" id="section-finale">
+      <div class="content glass-panel big-finish fade-in">
+        <h2>JOIN THE NETWORK</h2>
+        <p>The infrastructure is ready. The protocols are set. The only missing variable is you.</p>
+        <p>Step into the void and take control of the grid.</p>
+        <div class="button-group">
+          <button class="cta-button" id="start-btn">INITIALIZE CONNECTION</button>
+          <button class="cta-button secondary" id="doc-btn">VIEW DOCUMENTATION</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
