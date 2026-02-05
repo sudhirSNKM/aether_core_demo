@@ -20,6 +20,12 @@ export default class HeroObject {
             this.cursor.y = event.clientY / this.sizes.height - 0.5
         })
 
+        window.addEventListener('touchmove', (event) => {
+            const touch = event.touches[0]
+            this.cursor.x = touch.clientX / this.sizes.width - 0.5
+            this.cursor.y = touch.clientY / this.sizes.height - 0.5
+        }, { passive: true })
+
         this.setMaterial()
         this.setGeometry()
     }

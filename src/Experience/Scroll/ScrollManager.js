@@ -51,9 +51,10 @@ export default class ScrollManager {
         // SCROLL SECTIONS
 
         // 1. Reveal -> Exploration (Section 1 -> 2)
-        // Camera moves, Object Rotates
+        // 1. Reveal -> About (Section 1 -> 2)
+        // Gentle rotation for reading
         gsap.to(group.rotation, {
-            y: Math.PI * 2,
+            y: Math.PI * 0.5,
             scrollTrigger: {
                 trigger: "#section-reveal",
                 start: "top top",
@@ -62,14 +63,37 @@ export default class ScrollManager {
             }
         })
 
-        // 2. Exploration (Section 2)
-        // Move Camera for parallax feel
-        // Rotate object more aggressively
+        // 2. About -> Explore
+        // Flip object
         gsap.to(group.rotation, {
-            x: Math.PI * 0.5,
+            x: Math.PI * 0.2,
+            z: Math.PI * 0.2,
+            scrollTrigger: {
+                trigger: "#section-about",
+                start: "bottom bottom",
+                end: "bottom top",
+                scrub: 1.5
+            }
+        })
+
+        // 3. Explore -> Products
+        // Move object to side to make room for grid
+        gsap.to(group.position, {
+            x: 2, // Move right
             scrollTrigger: {
                 trigger: "#section-explore",
-                start: "top bottom",
+                start: "bottom center",
+                end: "bottom top",
+                scrub: 1.5
+            }
+        })
+
+        // Bring back to center for Transform
+        gsap.to(group.position, {
+            x: 0,
+            scrollTrigger: {
+                trigger: "#section-products",
+                start: "center center",
                 end: "bottom top",
                 scrub: 1.5
             }

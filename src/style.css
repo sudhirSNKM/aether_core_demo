@@ -250,6 +250,65 @@ p {
     color: var(--accent-color);
 }
 
+/* Services Grid */
+.wide-panel {
+    max-width: 800px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service-item {
+    border: 1px solid rgba(0, 243, 255, 0.3);
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+}
+
+.service-item:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.service-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+}
+
+.service-item p {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+}
+
+/* Testimonials */
+.testimonial {
+    margin-top: 2rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--accent-color);
+}
+
+.testimonial p {
+    font-style: italic;
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 0.5rem;
+}
+
+.testimonial .author {
+    font-size: 0.7rem;
+    color: var(--accent-color);
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
 /* Promo Banner */
 .promo-banner {
     position: fixed;
@@ -401,20 +460,65 @@ strong {
 /* Mobile */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+    }
+
+    .section {
+        padding: 0 20px;
+        justify-content: center !important;
+        /* Force center on mobile */
+        text-align: center;
+        height: 100dvh;
+        /* Use dynamic viewport height for mobile browsers */
     }
 
     .glass-panel {
         padding: 1.5rem;
         width: 100%;
-        margin: 10px;
+        max-width: 100%;
+        margin: 0;
+        bottom: 10%;
+        /* content slightly higher */
     }
 
-    .section {
-        padding: 0 20px;
+    /* Adjust Promo Banner for mobile to be less intrusive */
+    .promo-banner {
+        width: 100%;
+        right: 0;
+        bottom: 0;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        background: rgba(3, 3, 3, 0.9);
+        /* Darker background for readability */
+        padding: 1rem;
+    }
+
+    .promo-content p {
+        font-size: 0.8rem;
+        display: inline;
+    }
+
+    .promo-timer {
+        margin: 0.5rem 0;
+        padding: 0.25rem 0;
+        font-size: 1rem;
+    }
+
+    .ui-nav {
+        padding: 1.5rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .status-indicator {
+        font-size: 0.7rem;
     }
 }
